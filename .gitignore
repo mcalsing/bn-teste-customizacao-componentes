@@ -1,0 +1,11 @@
+# Pastas
+/node_modules/
+.vscode/
+
+
+# Detalhes sobre as classes e ids
+classes_ids.txt
+
+# Arquivos compilados
+*.css
+*.css.map

@@ -1,0 +1,15 @@
+{
+  "name": "bn-teste-customizacao-componentes",
+  "version": "1.0.0",
+  "description": "Se você chegou até aqui é por que já reconhecemos que você tem perfil para fazer parte do time Beonico!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.97.0"
+  }
+}
