@@ -1,6 +1,8 @@
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 // ----------------- CARD -----------------------
@@ -42,16 +44,21 @@ ul {
 }
 
 .beon-showcase__item-details {
-  background-color: green;
   order: 3;
+  display: flex;
+  align-items: center;
+
+  .detail-favoritos, .detail-notaPercentual {
+    display: none;
+  }
 }
 
 .beon-showcase__item-description {
-  order: 4
+  order: 4;
 }
 
 .beon-showcase__item {
-  background-color: yellow;
+  background-color: rgb(143, 143, 84);
   display: flex;
   flex-direction: column;
   border: 1px solid;
@@ -60,6 +67,8 @@ ul {
   overflow: hidden;
 }
 
+
+// --------- Item price -----------
 .beon-showcase__item-price-box {
   background-color: aqua;
   display: flex;
@@ -72,18 +81,27 @@ ul {
 }
 
 .beon-showcase__item-price {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  background-color: burlywood;
+  font-weight: 600;
 }
 
 .beon-showcase__item-price--from {
   text-decoration: line-through;
   font-size: 1rem;
+  font-weight: 400;
 }
 
 .beon-showcase__item-price--to {
-  font-size: 1.5rem;
+  background-color: rgb(129, 189, 189);
 }
 
 .beon-showcase__item-installments {
-  background-color: bisque;
+  background-color: aliceblue;
+}
+
+// ----------- Rating stars -------------
+
+.detail-qtdAvaliacoes {
+  
 }
