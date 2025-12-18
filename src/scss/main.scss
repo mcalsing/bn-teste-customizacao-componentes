@@ -1,7 +1,7 @@
 @use 'reset';
 @use 'variables';
 @use 'mixins';
-@use 'components/carousel';
+@use 'carousel';
 
 // ----------------- Container -----------------
 
@@ -38,15 +38,14 @@
     position: relative;
     z-index: 0;
     border-bottom: 1px solid variables.$border-color;
-    
-    
+      
     a {
       @include mixins.flex-center;
     }
 
     img {
-      max-width: 140px;
-      max-height: 140px;
+      max-width: 150px;
+      max-height: 150px;
       object-fit: contain;
     }
   }

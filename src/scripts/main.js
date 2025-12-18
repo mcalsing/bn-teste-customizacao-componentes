@@ -68,6 +68,7 @@ wishlist.forEach(el => {
   // Evento para trocar por um coração colorido no hover
   hearthWishlist.addEventListener('mouseenter', () => {
     hearthWishlist.src = '/src/assets/heart_color.png';
+    hearthWishlist.style.opacity = '0.8';
   });
   
   hearthWishlist.addEventListener('mouseleave', () => {
@@ -82,7 +83,7 @@ wishlist.forEach(el => {
 const buttonPrev = document.querySelector('.tns-controls button:first-child')
 const buttonNext = document.querySelector('.tns-controls button:last-child');
 
-// Prev button
+// Prev
 const prevImage = document.createElement('img')
 prevImage.src = '/src/assets/angle-left.png';
 prevImage.alt = 'prev button';
@@ -90,7 +91,7 @@ buttonPrev.innerHTML = '';
 
 buttonPrev.appendChild(prevImage);
 
-// Next button
+// Next
 const nextImage = document.createElement('img');
 nextImage.src = '/src/assets/angle-right.png';
 nextImage.alt = 'next button';
