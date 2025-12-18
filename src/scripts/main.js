@@ -1,8 +1,9 @@
+// Inserção de entrelas com base na nota media do produto
+
 const averageRatingStars = document.querySelectorAll(".detail-notaMedia");
 
 averageRatingStars.forEach(el => {
   const rating = parseFloat(el.textContent.trim());
-  console.log(rating)
 
   // Retira a nota do html
   el.textContent = '';
@@ -51,3 +52,27 @@ averageRatingStars.forEach(el => {
   // Insere o starsConteiner antes do .detail-notaMedia
   el.parentNode.insertBefore(starsContainer, el);
 });
+
+// ---------------------------- Wishlist ----------------------------------
+
+// Adiciona a imagem do coração no botão já existente no html
+const wishlist = document.querySelectorAll(".beon-showcase__wishlist-icon")
+
+wishlist.forEach(el => {
+  const hearthWishlist = document.createElement('img');
+  hearthWishlist.src = '/src/assets/heart.png';
+  hearthWishlist.style.width = '14px'
+  hearthWishlist.className = 'beon-showcase__wishlist-image';
+
+  // Evento para trocar por um coração colorido
+  hearthWishlist.addEventListener('mouseenter', () => {
+    hearthWishlist.src = '/src/assets/heart_color.png';
+  });
+  
+  hearthWishlist.addEventListener('mouseleave', () => {
+    hearthWishlist.src = '/src/assets/heart.png';
+  });
+
+  el.appendChild(hearthWishlist);
+})
+
