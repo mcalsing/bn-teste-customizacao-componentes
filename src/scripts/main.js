@@ -53,6 +53,7 @@ averageRatingStars.forEach(el => {
   el.parentNode.insertBefore(starsContainer, el);
 });
 
+
 // ---------------------------- Wishlist ----------------------------------
 
 // Adiciona a imagem do coração no botão já existente no html
@@ -64,7 +65,7 @@ wishlist.forEach(el => {
   hearthWishlist.style.width = '14px'
   hearthWishlist.className = 'beon-showcase__wishlist-image';
 
-  // Evento para trocar por um coração colorido
+  // Evento para trocar por um coração colorido no hover
   hearthWishlist.addEventListener('mouseenter', () => {
     hearthWishlist.src = '/src/assets/heart_color.png';
   });
@@ -75,4 +76,28 @@ wishlist.forEach(el => {
 
   el.appendChild(hearthWishlist);
 })
+
+
+// ----------------------- Angle slider ----------------------
+const buttonPrev = document.querySelector('.tns-controls button:first-child')
+const buttonNext = document.querySelector('.tns-controls button:last-child');
+
+// Prev button
+const prevImage = document.createElement('img')
+prevImage.src = '/src/assets/angle-left.png';
+prevImage.alt = 'prev button';
+buttonPrev.innerHTML = '';
+
+buttonPrev.appendChild(prevImage);
+
+// Next button
+const nextImage = document.createElement('img');
+nextImage.src = '/src/assets/angle-right.png';
+nextImage.alt = 'next button';
+buttonNext.innerHTML = '';
+
+buttonNext.appendChild(nextImage);
+
+
+
 
