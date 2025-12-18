@@ -5,6 +5,7 @@ const averageRatingStars = document.querySelectorAll(".detail-notaMedia");
 averageRatingStars.forEach(el => {
   const rating = parseFloat(el.textContent.trim());
 
+  //console.log(rating)
   // Retira a nota do html
   el.textContent = '';
 
@@ -99,6 +100,13 @@ buttonNext.innerHTML = '';
 
 buttonNext.appendChild(nextImage);
 
+// -------------------- Badge -----------------------
+const discount = document.querySelectorAll('.beon-showcase__item-discount');
 
+discount.forEach(el => {
+  const value = parseFloat(el.textContent.trim());
 
-
+  if (!isNaN(value)) {
+    el.innerHTML = `-${value}%`
+  }
+})

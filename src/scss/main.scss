@@ -12,32 +12,50 @@
 
 // ----------------- Card -----------------------
 
+.beon-showcase__head-inner {
+  margin: 8px;
+  margin-left: 12px;
+  font-size: large;
+}
+
+.beon-showcase__items-wrapper {
+  display: flex;
+  padding-bottom: 30px;
+  gap: 13px;
+  justify-content: space-between;
+}
+
 .beon-showcase__item {
   display: flex;
   flex-direction: column;
-  border: 1px solid variables.$border-color;
-  margin: 10px;
+  border: 2px solid variables.$border-color;
   border-radius: 5px;
   overflow: hidden;
   height: 100%;
   padding: 8px;
+  max-width: 235px;
 
   &-badge {
-    color: rgb(15, 92, 15);
-    background-color: rgb(109, 231, 109);
+    color: rgb(48, 163, 48);
+    background-color: rgb(196, 253, 196);
     width: fit-content;
     border-radius: 10px;
-    padding: 4px;
+    padding: 2px;
+    padding-inline: 10px;
     font-weight: bold;
     position: absolute;
     z-index: 10;
+
+    .null {
+      display: none;
+    }
   }
 
   &-image {
     order: 1;
     position: relative;
     z-index: 0;
-    border-bottom: 1px solid variables.$border-color;
+    //border-bottom: 1px solid variables.$secondary-color;
       
     a {
       @include mixins.flex-center;
@@ -52,10 +70,19 @@
 
   &-title {
     order: 2;
-  
+    
     a {
       text-decoration: none;
-      color: rgb(75, 75, 75);
+      color: rgb(122, 122, 122);
+    }
+
+    span {
+      font-weight: 600;
+    }
+
+    h3 {
+      margin-top: 0;
+      padding: 0;
     }
   }
 
@@ -115,7 +142,7 @@
   a {
     text-decoration: none;
     color: rgb(75, 75, 75);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -127,13 +154,28 @@
     all: unset;
     cursor: pointer;
 
-    display: flex;
-    justify-content: flex-end;
-    width: 90%;
-    margin-bottom: 7px;
+    position: absolute;
+    left: 85%;
+    bottom: 3%;
+    background-color: variables.$heart-color;
+    padding: 6px;
+    border-radius: 50%;
+    @include mixins.flex-center;
+
+
+    //display: flex;
+    //justify-content: flex-end;
+    //width: 90%;
     //background-color: rgb(232, 232, 236);
     //border-radius: calc(infinity * 1px);
   }
 }
 
+
+// -------- Mais vendidos ----------
+.beon-tag__frete_gratis_sul_e_sp_havan_teste {
+  position: absolute;
+  top: 0;
+  right: -40px
+}
 
