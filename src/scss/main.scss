@@ -10,13 +10,18 @@
   margin-inline: auto;
 }
 
-// ----------------- Card -----------------------
+// ---------------- Title ----------------------
 
 .beon-showcase__head-inner {
   margin: 8px;
   margin-left: 12px;
   font-size: large;
+  color: rgb(65, 65, 250);
+  font-weight: 600;
 }
+
+// ----------------- Card -----------------------
+
 
 .beon-showcase__items-wrapper {
   display: flex;
@@ -77,7 +82,7 @@
     }
 
     span {
-      font-weight: 600;
+      font-weight: 500;
     }
 
     h3 {
@@ -103,12 +108,14 @@
   &-price {
     font-size: 1.8rem;
     font-weight: 600;
+    
 
     &-box {
       display: flex;
       flex-direction: column;
       gap: 3px;
       margin-top: auto;
+      color: rgb(77, 76, 76);
     }
 
     &--from {
@@ -121,6 +128,18 @@
 
     }
   }
+
+  &-installments strong {
+    font-weight: 400;
+  }
+
+  // retira o ou do preço parcelado
+  &-installments .null:first-child {
+    display: none;
+  }
+
+  //#tns1-item22 > div > div.beon-showcase__item-description > div > span.beon-showcase__item-installments > strong.beon-interaction__installmentsCount
+
 }
 
 // Esconder de e por
@@ -160,14 +179,8 @@
     background-color: variables.$heart-color;
     padding: 6px;
     border-radius: 50%;
+    opacity: 0.7;
     @include mixins.flex-center;
-
-
-    //display: flex;
-    //justify-content: flex-end;
-    //width: 90%;
-    //background-color: rgb(232, 232, 236);
-    //border-radius: calc(infinity * 1px);
   }
 }
 

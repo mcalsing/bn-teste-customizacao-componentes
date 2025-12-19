@@ -21,7 +21,7 @@ averageRatingStars.forEach(el => {
     // Estrelas cheias
     for (let i = 0; i < Math.floor(rating); i++) {
       const starImage = document.createElement('img');
-      starImage.src = '/src/assets/color_star.png';
+      starImage.src = '/src/assets/star-color2.png';
       starImage.alt = 'rating star';
       starImage.style.width = '15px';
 
@@ -31,9 +31,9 @@ averageRatingStars.forEach(el => {
     // Estrelas pela metade
     if (rating % 1 >= 0.5) {
       const starImage = document.createElement('img');
-      starImage.src = '/src/assets/half_star2.png'; 
+      starImage.src = '/src/assets/star-half4.png'; 
       starImage.alt = 'half star';
-      starImage.style.width = '16px';
+      starImage.style.width = '15px';
       
       starsContainer.appendChild(starImage);
     }
@@ -42,9 +42,9 @@ averageRatingStars.forEach(el => {
     // Caso não tenha nennhuma avaliação, 5 estrelas cinzas
     for (let i = 0; i < 5; i++) {
       const starImage = document.createElement('img');
-      starImage.src = '/src/assets/star.png';
+      starImage.src = '/src/assets/star2.png';
       starImage.alt = 'rating star';
-      starImage.style.width = '16px';
+      starImage.style.width = '15px';
       
       starsContainer.appendChild(starImage);
     }
@@ -62,18 +62,26 @@ const wishlist = document.querySelectorAll(".beon-showcase__wishlist-icon")
 
 wishlist.forEach(el => {
   const hearthWishlist = document.createElement('img');
-  hearthWishlist.src = '/src/assets/heart.png';
+  hearthWishlist.src = '/src/assets/heart-gray2.png';
   hearthWishlist.style.width = '14px'
+  hearthWishlist.alt = 'heart'
   hearthWishlist.className = 'beon-showcase__wishlist-image';
 
   // Evento para trocar por um coração colorido no hover
   hearthWishlist.addEventListener('mouseenter', () => {
-    hearthWishlist.src = '/src/assets/heart_color.png';
-    hearthWishlist.style.opacity = '0.8';
+    hearthWishlist.src = '/src/assets/heart-color.png';
+    hearthWishlist.style.width = '15px'
+    hearthWishlist.alt = 'heart'
+    hearthWishlist.className = 'beon-showcase__wishlist-image';
   });
   
+//home/mcalsing/Documents/bn-teste-customizacao-componentes/src/assets/heart _gray2.png
+
   hearthWishlist.addEventListener('mouseleave', () => {
-    hearthWishlist.src = '/src/assets/heart.png';
+    hearthWishlist.src = '/src/assets/heart-gray2.png';
+    hearthWishlist.style.width = '14px'
+    hearthWishlist.alt = 'heart'
+    hearthWishlist.className = 'beon-showcase__wishlist-image';
   });
 
   el.appendChild(hearthWishlist);
@@ -86,19 +94,22 @@ const buttonNext = document.querySelector('.tns-controls button:last-child');
 
 // Prev
 const prevImage = document.createElement('img')
-prevImage.src = '/src/assets/angle-left.png';
+prevImage.src = '/src/assets/arrow-left.png';
 prevImage.alt = 'prev button';
+prevImage.style.width = '20px'
 buttonPrev.innerHTML = '';
 
 buttonPrev.appendChild(prevImage);
 
 // Next
 const nextImage = document.createElement('img');
-nextImage.src = '/src/assets/angle-right.png';
+nextImage.src = '/src/assets/arrow-right.png';
 nextImage.alt = 'next button';
+nextImage.style.width = '20px'
 buttonNext.innerHTML = '';
 
 buttonNext.appendChild(nextImage);
+
 
 // -------------------- Badge -----------------------
 const discount = document.querySelectorAll('.beon-showcase__item-discount');
