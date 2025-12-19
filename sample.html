@@ -1981,12 +1981,25 @@
     <script type="module">
         var slider = tns({
             container: '.beon-showcase__items-wrapper',
-            //controlsContainer: '#tns-controls',
-            //prevButton: '.prev',
-            //nextButton: '.next',
-            items: 5,
             slideBy: 'page',
-            autoplay: false
+            autoplay: false,
+            gutter: 26,
+            edgePadding: 25,
+            navPosition: 'bottom',
+            responsive: {
+                450: {
+                    items: 2,
+                },
+                768: {
+                    items: 3,
+                },
+                1024: {
+                    items: 4,
+                },
+                1280: {
+                    items: 5,
+                }
+            }
         });
 
         console.log(slider)

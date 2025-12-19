@@ -15,6 +15,7 @@
 .beon-showcase__head-inner {
   margin: 8px;
   margin-left: 12px;
+  margin-bottom: 17px;
   font-size: large;
   color: rgb(65, 65, 250);
   font-weight: 600;
@@ -26,8 +27,8 @@
 .beon-showcase__items-wrapper {
   display: flex;
   padding-bottom: 30px;
-  gap: 13px;
-  justify-content: space-between;
+  //gap: 13px;
+  justify-content: center;
 }
 
 .beon-showcase__item {
@@ -38,7 +39,9 @@
   overflow: hidden;
   height: 100%;
   padding: 8px;
-  max-width: 235px;
+  max-width: 225px;
+  //margin-left: 5px;
+  //margin-right: 5px;
 
   &-badge {
     color: rgb(48, 163, 48);
@@ -137,9 +140,6 @@
   &-installments .null:first-child {
     display: none;
   }
-
-  //#tns1-item22 > div > div.beon-showcase__item-description > div > span.beon-showcase__item-installments > strong.beon-interaction__installmentsCount
-
 }
 
 // Esconder de e por

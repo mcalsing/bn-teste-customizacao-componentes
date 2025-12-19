@@ -1,4 +1,5 @@
 @use 'variables';
+@use 'mixins';
 
 .tns-outer {
   position: relative;
@@ -6,17 +7,21 @@
 
 .tns-controls {
   position: absolute;
-  top: 50%;
+  top: 32%;
   width: 100%;
-  z-index: 10;
-  transform: translateY(-50%);
   z-index: 10;
 
   button {
     all: unset;
     cursor: pointer;
+    
     position: absolute;
-    transform: translateY(-50%);
+    padding: 4px;
+    background-color: variables.$arrow-back-color;
+    border-radius: 50%;
+    @include mixins.flex-center;
+
+    //transform: translateY(-180%);
   }
 
   // prev
@@ -30,18 +35,17 @@
   }
 }
 
+// Barra de posição do slider
 .tns-nav {
-  position: absolute;
   text-align: center;
-  //top: -10px;
-  top: 95%;
   width: 100%;
 }
 
 .tns-nav button {
   border: none;
   padding: 2px;
-  width: 16%;
+  // Para 6 barras
+  //width: 16.5%;
   background-color: rgb(190, 190, 253);
 }
 
