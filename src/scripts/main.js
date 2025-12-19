@@ -138,8 +138,8 @@ window.addEventListener('resize', () => {
     console.log(window.innerWidth)
     sliderNavControl.forEach(el => {
       if (window.innerWidth >= 1280) el.style.width = '16.2%'
-      else if (window.innerWidth >= 1024) el.style.width = '13.9%'
-      else if (window.innerWidth >= 768) el.style.width = '9.6%'
+      else if (window.innerWidth >= 950) el.style.width = '13.9%'
+      else if (window.innerWidth >= 650) el.style.width = '9.6%'
       else if (window.innerWidth >= 450) el.style.width = '6.6%'
     })
     // timeout de 50ms
