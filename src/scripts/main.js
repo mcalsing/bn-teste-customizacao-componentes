@@ -24,7 +24,7 @@ averageRatingStars.forEach(el => {
     // Estrelas cheias
     for (let i = 0; i < Math.floor(rating); i++) {
       const starImage = document.createElement('img')
-      starImage.src = '/src/assets/star-color2.png'
+      starImage.src = '/src/assets/color-star.png'
       starImage.alt = 'rating star'
       starImage.style.width = '15px'
 
@@ -34,7 +34,7 @@ averageRatingStars.forEach(el => {
     // Estrelas pela metade
     if (rating % 1 >= 0.5) {
       const starImage = document.createElement('img')
-      starImage.src = '/src/assets/star-half4.png'
+      starImage.src = '/src/assets/half-star.png'
       starImage.alt = 'half star'
       starImage.style.width = '15px'
       
@@ -45,7 +45,7 @@ averageRatingStars.forEach(el => {
     // Caso não tenha nennhuma avaliação, 5 estrelas cinzas
     for (let i = 0; i < 5; i++) {
       const starImage = document.createElement('img')
-      starImage.src = '/src/assets/star2.png'
+      starImage.src = '/src/assets/star.png'
       starImage.alt = 'rating star'
       starImage.style.width = '15px'
       
@@ -65,14 +65,14 @@ const wishlist = document.querySelectorAll(".beon-showcase__wishlist-icon")
 
 wishlist.forEach(el => {
   const hearthWishlist = document.createElement('img')
-  hearthWishlist.src = '/src/assets/heart-gray2.png'
+  hearthWishlist.src = '/src/assets/gray-heart.png'
   hearthWishlist.style.width = '14px'
   hearthWishlist.alt = 'heart'
   hearthWishlist.className = 'beon-showcase__wishlist-image'
 
   // Evento para trocar por um coração colorido no hover
   hearthWishlist.addEventListener('mouseenter', () => {
-    hearthWishlist.src = '/src/assets/heart-color.png'
+    hearthWishlist.src = '/src/assets/color-heart.png'
     hearthWishlist.style.width = '15px'
     hearthWishlist.alt = 'heart'
     hearthWishlist.className = 'beon-showcase__wishlist-image'
@@ -80,7 +80,7 @@ wishlist.forEach(el => {
   
 
   hearthWishlist.addEventListener('mouseleave', () => {
-    hearthWishlist.src = '/src/assets/heart-gray2.png'
+    hearthWishlist.src = '/src/assets/gray-heart.png'
     hearthWishlist.style.width = '14px'
     hearthWishlist.alt = 'heart'
     hearthWishlist.className = 'beon-showcase__wishlist-image'
@@ -134,16 +134,13 @@ let resizeTimeout
 // Função para descobrir o tamanho da tela e mudar o tamanho do slider nav control
 window.addEventListener('resize', () => {
   clearTimeout(resizeTimeout)
-  resizeTimeout = setTimeout(() => {
-    console.log(window.innerWidth)
-    sliderNavControl.forEach(el => {
-      if (window.innerWidth >= 1280) el.style.width = '16.2%'
-      else if (window.innerWidth >= 950) el.style.width = '13.9%'
-      else if (window.innerWidth >= 650) el.style.width = '9.6%'
-      else if (window.innerWidth >= 450) el.style.width = '6.6%'
-    })
-    // timeout de 50ms
-  }, 50);
+  //console.log(window.innerWidth)
+  sliderNavControl.forEach(el => {
+    if (window.innerWidth >= 1280) el.style.width = '16.2%'
+    else if (window.innerWidth >= 950) el.style.width = '13.9%'
+    else if (window.innerWidth >= 650) el.style.width = '9.6%'
+    else if (window.innerWidth >= 450) el.style.width = '6.6%'
+  })
 });
 
 

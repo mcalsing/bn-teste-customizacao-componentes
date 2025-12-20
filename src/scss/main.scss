@@ -17,7 +17,7 @@
   margin-left: 12px;
   margin-bottom: 17px;
   font-size: large;
-  color: rgb(65, 65, 250);
+  color: variable.$main-title-color;
   font-weight: 600;
 }
 
@@ -28,7 +28,6 @@
   display: flex;
   padding-bottom: 30px;
   //gap: 13px;
-  justify-content: center;
 }
 
 .beon-showcase__item {
@@ -44,8 +43,8 @@
   //margin-right: 5px;
 
   &-badge {
-    color: rgb(48, 163, 48);
-    background-color: rgb(196, 253, 196);
+    color: variables.$badge-primary-color;
+    background-color: variables.$badge-background-color;
     width: fit-content;
     border-radius: 10px;
     padding: 2px;
@@ -63,7 +62,8 @@
     order: 1;
     position: relative;
     z-index: 0;
-    //border-bottom: 1px solid variables.$secondary-color;
+    margin-bottom: 5px;
+    //border-bottom: 1px solid variables.$border-color;
       
     a {
       @include mixins.flex-center;
@@ -81,7 +81,7 @@
     
     a {
       text-decoration: none;
-      color: rgb(122, 122, 122);
+      color: variables.$product-color-title;
     }
 
     span {
@@ -118,7 +118,7 @@
       flex-direction: column;
       gap: 3px;
       margin-top: auto;
-      color: rgb(77, 76, 76);
+      color: variables.$product-color-price;
     }
 
     &--from {
@@ -160,7 +160,7 @@
 
   a {
     text-decoration: none;
-    color: rgb(75, 75, 75);
+    color: variables.$product-color-price;
     font-size: 0.9rem;
   }
 }

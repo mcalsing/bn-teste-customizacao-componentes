@@ -17,7 +17,7 @@
     
     position: absolute;
     padding: 4px;
-    background-color: variables.$arrow-back-color;
+    background-color: variables.$arrow-background-color;
     border-radius: 50%;
     @include mixins.flex-center;
 
