@@ -11,17 +11,19 @@ cd bn-teste-customizacao-componentes
 npm install
 ```
 
-## Compilador os estilos
+## Compilador de estilos (SASS)
+
+### Somente compilar
+```
+npm run sass:build
+```
 
 ### Modo watch
 ```
 npm run sass:watch
 ```
 
-### Somente compilar
-```
-npm run sass:build
-```
+
 
 ## Abrir a página
 ```
