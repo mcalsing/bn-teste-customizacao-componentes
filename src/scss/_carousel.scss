@@ -20,8 +20,6 @@
     background-color: variables.$arrow-background-color;
     border-radius: 50%;
     @include mixins.flex-center;
-
-    //transform: translateY(-180%);
   }
 
   // prev

@@ -1,3 +1,45 @@
+# Como executar o projeto:
+
+## Clonar o repositório
+```
+git clone git@github.com:mcalsing/bn-teste-customizacao-componentes.git
+cd bn-teste-customizacao-componentes
+```
+
+## Instalar dependências
+```
+npm install
+```
+
+## Compilador os estilos
+
+### Modo watch
+```
+npm run sass:watch
+```
+
+### Somente compilar
+```
+npm run sass:build
+```
+
+## Abrir a página
+```
+npm run dev
+```
+ou abrir o arquivo index.html pelo Live Server no VS Code.
+
+# Tecnologias utilizadas
+
+ - HTML5 (fornecido no repositório base, sem alterações estruturais)
+
+ - SASS (SCSS): pré-compilador de CSS
+
+ - JavaScript (ES6+)
+
+ - Tiny Slider: criação e controle de carrossel
+---------------------------------------------------------------
+
 # Bem-vindo ao teste de frontend do Beonly.
 
 Se você chegou até aqui é por que já reconhecemos que você tem perfil para fazer parte do time Beonico!

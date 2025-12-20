@@ -4,7 +4,10 @@
   "description": "Se você chegou até aqui é por que já reconhecemos que você tem perfil para fazer parte do time Beonico!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:watch": "npx sass --watch src/scss:src/css",
+    "sass:build": "npx sass src/scss:src/css --style=compressed",
+    "dev": "npx serve ."
   },
   "keywords": [],
   "author": "",

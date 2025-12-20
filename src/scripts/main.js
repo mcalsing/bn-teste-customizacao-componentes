@@ -127,20 +127,18 @@ discount.forEach(el => {
 
 
 // -------------------- Slider nav control ----------------
-const sliderNavControl = document.querySelectorAll('.tns-nav button')
+const sliderNavControl = document.querySelectorAll('.tns-nav button');
 
-let resizeTimeout
-
-// Função para descobrir o tamanho da tela e mudar o tamanho do slider nav control
-window.addEventListener('resize', () => {
-  clearTimeout(resizeTimeout)
-  //console.log(window.innerWidth)
+function updateSliderNavControl() {
   sliderNavControl.forEach(el => {
-    if (window.innerWidth >= 1280) el.style.width = '16.2%'
-    else if (window.innerWidth >= 950) el.style.width = '13.9%'
-    else if (window.innerWidth >= 650) el.style.width = '9.6%'
-    else if (window.innerWidth >= 450) el.style.width = '6.6%'
-  })
-});
+    if (window.innerWidth >= 1280) el.style.width = '16.2%';
+    else if (window.innerWidth >= 950) el.style.width = '13.9%';
+    else if (window.innerWidth >= 650) el.style.width = '9.6%';
+    else if (window.innerWidth >= 450) el.style.width = '6.6%';
+  });
+}
 
+updateSliderNavControl();
+
+window.addEventListener('resize', updateSliderNavControl);
 
